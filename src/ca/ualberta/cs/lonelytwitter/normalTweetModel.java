@@ -12,9 +12,12 @@ public class normalTweetModel extends lonelyTweetModel {
 		
 	}
 	
-	public boolean normal(){
-		return true;
+	@Override
+	public void setImportant(boolean important) throws Exception{
+		if (important){
+			throw new IllegalArgumentException();
+		}
+		this.important = important;
 	}
-	
-	
+
 }
