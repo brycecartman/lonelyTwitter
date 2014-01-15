@@ -6,6 +6,8 @@ public abstract class lonelyTweetModel {
 	protected String text;
 	protected Date timestamp;
 	
+
+	
 	public String getText() {
 		return text;
 	}
@@ -31,5 +33,9 @@ public abstract class lonelyTweetModel {
 		this.text = text;
 		this.timestamp = new Date();
 	}
+	
+	public abstract boolean normal();
+		
+	
 	
 }
