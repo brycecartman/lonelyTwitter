@@ -35,7 +35,6 @@ public abstract class lonelyTweetModel {
 	}
 	
 	public abstract boolean normal();
-		
-	
-	
+
+
 }

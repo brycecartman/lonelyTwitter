@@ -19,5 +19,5 @@ public class importantTweetModel extends lonelyTweetModel {
 	public boolean normal(){
 		return false;
 	}
-
+	
 }
