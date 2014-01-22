@@ -1,12 +1,19 @@
 package ca.ualberta.cs.lonelytwitter;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public abstract class LonelyTweetModel {
+import com.google.gson.Gson;
+
+import android.widget.ArrayAdapter;
+
+public abstract class LonelyTweetModel implements Serializable{
+	
 	protected String text;
 	protected Date timestamp;
 	protected boolean important;
-
+	private Gson gson = new Gson();
+	
 	
 	public String getText() {
 		return text;
