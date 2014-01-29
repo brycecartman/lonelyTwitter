@@ -10,8 +10,15 @@ public class TweetSetModel {
 		return count;
 	}
 
-	public void addTweet(LonelyTweetModel lonelyTweetModel) {
+	public void addTweet(LonelyTweetModel lonelyTweetModel) throws IllegalArgumentException{
 		count++;	
+		
+		if(count > 1){
+			if(lonelyTweetArray[count-2].equals(lonelyTweetModel)){
+				throw new IllegalArgumentException();
+			}
+		}
+		lonelyTweetArray[count-1] = lonelyTweetModel;	
 	}
 	
 	public LonelyTweetModel[] getTweets() {	

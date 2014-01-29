@@ -54,5 +54,23 @@ public class TweetSetModelTest extends ActivityInstrumentationTestCase2<LonelyTw
 		assertEquals("Lonely Array equals Local Array", true, Arrays.equals(lonelyTweetArray, localTweetArray))	;
 		
 	}
+	
+	public void testAddingSameTweets(){
 
+		TweetSetModel tweets = new TweetSetModel();
+		
+		// Adds a Normal Tweet
+		
+		NormalTweetModel tweet = new NormalTweetModel("test");
+			
+		tweets.addTweet(tweet);
+		
+	try {
+		tweets.addTweet(tweet);
+		fail("Added duplicate tweet failed");
+	} catch (IllegalArgumentException e){
+		
+	}
+		
+	}
 }
